@@ -22,13 +22,20 @@ describe('guessTheNumber()', () => {
   })
 
   xit('should return winning message if generated number is equal to the user input', function(){
-    expect(guessTheNumber()).to.equal("the guess matched the computer's number")
+    expect(guessTheNumber(guess).alert).to.equal("the guess matched the computer's number")
 })
-  xit('should return winning message if generated number is greater than the user input', function(){
-    expect(guessTheNumber()).to.equal("the guess is lower than the computer's number")
+  xit('should return message if generated number is greater than the user input', function(){
+    expect(guessTheNumber(guess).alert).to.equal("the guess is lower than the computer's number")
   })
 
-  xit('should return winning message if generated number is lower than the user input', function(){
-    expect(guessTheNumber()).to.equal("the guess is greater than the computerå's number")
+  xit('should return message if generated number is lower than the user input', function(){
+    expect(guessTheNumber(guess).alert).to.equal("the guess is greater than the computer's number")
+
   })
+
+  xit("should return exit message and terminate the program if the user input is 'exit'", function(){
+    expect(guessTheNumber(guess).alert).to.equal("exit", /*terminate*/)
+
+  })
+
 })
