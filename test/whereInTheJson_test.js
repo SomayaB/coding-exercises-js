@@ -22,7 +22,15 @@ var weirdObject = `{
     ]
 }`
 const newObject = JSON.parse(weirdObject)
-describe.only('whereInTheJson', () => {
-  expect(whereInTheJson).to.be.a.function
-  expect(whereInTheJson(newObject, '4chan'))
+
+describe('whereInTheJson()', () => {
+
+  it('should be a function', function() {
+    expect(whereInTheJson).to.be.a('function')
+  })
+
+  it('should return the path for a value in an object', function() {
+      expect(whereInTheJson(newObject, '4chan')).to.equal("favoriteSites -> 1")
+  })
+
 })
