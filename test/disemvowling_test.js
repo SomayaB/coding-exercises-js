@@ -1,5 +1,5 @@
 import { expect } from 'chai'
-import disemvoweling from '../src/disemvoweling'
+import disemvoweling from '../src/disemvowling'
 
 describe('disemvoweling()', () => {
 
