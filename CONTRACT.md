@@ -15,7 +15,7 @@ Specifications
  [x] 11. Lairotcaf
  [] 12. String Me Along
  [] 13. Braille
- [] 14. String Permutations
+ [x] 14. String Permutations
  [] 15. Finite State Gate
 
  Can run all tests with npm test.
